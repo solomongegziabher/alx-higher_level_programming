@@ -3,7 +3,7 @@
 const request = require('request');
 
 const movieId = process.argv[2];
-const url = `https://swapi.dev/api/films/${movieId}/`;
+const starWarsUri = 'https://swapi-api.hbtn.io/api/films/'.concat(process.argv[2]);
 
 request.get(url, (error, response, body) => {
   if (error) {
